@@ -1,0 +1,15 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <input [formControl]="$any(profileForm.controls['firstName'])" type="Text">
+  <input [formControl]="$any(profileForm.controls['lastName'])" type="Text">
+  <input [formControl]="$any(profileForm.controls['age'])" type="number">
+  <input [formControl]="$any(profileForm.controls['hide'])" class="form-check-input" type="checkbox" value="" id="flexCheckDefault" (click)="hideClique()">
+
+  <div class="form-group" *ngIf="emailAffiche">
+    <label for="exampleInputEmail1">Email address</label>
+    <input [formControl]="$any(profileForm.controls['email'])" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <textarea [formControl]="$any(profileForm.controls['commentaire'])">Commentaire</textarea>
+  <button type="submit" [disabled]="profileForm.invalid">send</button>
+</form>
