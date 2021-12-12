@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {ServiceGestionService} from "../service-gestion.service";
-import {Router} from "@angular/router";
-import {FormBuilder} from "@angular/forms";
 
 @Component({
   selector: 'app-page-gestion',
@@ -9,12 +7,12 @@ import {FormBuilder} from "@angular/forms";
   styleUrls: ['./page-gestion.component.scss']
 })
 export class PageGestionComponent implements OnInit {
+  public recupInfos: Object={ firstName: '', lastName: '', age: '', email: '', commentaire: '' };
 
-  //constructor(private sg : ServiceGestionService){}
-  constructor(){}
+  constructor(private sg : ServiceGestionService){}
 
   ngOnInit(): void {
-    //alert(this.sg.emitSubject());
+    this.recupInfos = this.sg.emitSubject();
   }
 
 }
