@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ServiceGestionService} from "../service-gestion.service";
+import {Router} from "@angular/router";
+import {FormBuilder} from "@angular/forms";
 
 @Component({
   selector: 'app-page-gestion',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageGestionComponent implements OnInit {
 
-  constructor() { }
+  //constructor(private sg : ServiceGestionService){}
+  constructor(){}
 
   ngOnInit(): void {
+    //alert(this.sg.emitSubject());
   }
 
 }

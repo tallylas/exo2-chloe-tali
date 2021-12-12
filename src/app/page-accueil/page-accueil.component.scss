@@ -1,8 +1,20 @@
 .film{
-  width:300px;
-  height:400px;
+  width:800px;
+  height:450px;
 }
 
 .divFilm{
   text-align:center;
+}
+
+.titreAccueil {
+  font-size: 55px;
+  font-family: "Snell Roundhand";
+  font-weight:bold;
+
+  text-shadow:
+    -1px 2px 1px #737272,
+    -2px 4px 1px #767474,
+    -3px 6px 1px #787777,
+    -4px 8px 1px #7b7a7a,
 }

@@ -1,0 +1,37 @@
+.form-group{
+  margin:20px;
+  padding:0px;
+}
+
+.form-check{
+  margin-left:50px;
+  padding:0px;
+}
+
+fieldset {
+  border:1px solid black;
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  border-radius:8px;
+}
+
+form{
+  position:absolute;
+  left:30%;
+  right:30%;
+  width:40%;
+}
+
+.titreContact {
+  font-size: 55px;
+  font-family: "Snell Roundhand";
+  font-weight:bold;
+
+  text-shadow:
+    -1px 2px 1px #737272,
+    -2px 4px 1px #767474,
+    -3px 6px 1px #787777,
+    -4px 8px 1px #7b7a7a;
+
+  text-align:center;
+}

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, NgForm, Validators} from "@angular/forms";
+import {ServiceGestionService} from "../service-gestion.service";
+import {Router} from "@angular/router";
+//import {InfosForm} from "../InfosForm";
 
 @Component({
   selector: 'app-page-contact',
@@ -9,6 +12,7 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 export class PageContactComponent implements OnInit {
 
   public emailAffiche:boolean=true;
+  //private myObject: Object={ firstName: '', lastName: '', age: '', email: '', commentaire: '' };
 
   public profileForm = this.fb.group({
     firstName:['',Validators.required],
@@ -19,13 +23,11 @@ export class PageContactComponent implements OnInit {
     commentaire:['',Validators.required]
   })
 
-  constructor(private fb : FormBuilder){
+  //constructor(private router: Router, private fb : FormBuilder, private sg : ServiceGestionService){}
+  constructor(private fb : FormBuilder){}
 
-  }
 
-
-ngOnInit(): void {
-  }
+ngOnInit(): void {}
 
   public hideClique() {
 
@@ -37,8 +39,35 @@ ngOnInit(): void {
       this.profileForm.addControl('email',new FormControl('', [Validators.required, Validators.email]));
     }
   }
+
   public onSubmit(){
-    alert("le formulaire est valide");
+    alert("Le formulaire est valide");
+
+    /*const firstName = form.value['firstName'];
+    const lastName = form.value['lastName'];
+    const age = form.value['age'];
+    const email = form.value['email'];
+    const commentaire = form.value['commentaire'];
+
+    //myObject = new Object(firstName, lastName, age, email, commentaire);
+
+    this.sg.recupererInfos(firstName, lastName, age, email, commentaire);
+    this.router.navigate(['/accueil']);*/
   }
+
+  /*public onSubmit(value : any){
+    alert("Le formulaire est valide");
+
+    const firstName = value.firstName;
+    const lastName = value.lastName;
+    const age = value.age;
+    const email = value.email;
+    const commentaire = value.commentaire;
+
+    //this.myObject = new InfosForm(firstName, lastName, age, email, commentaire);
+
+    this.sg.recupererInfos(firstName, lastName, age, email, commentaire);
+    //this.router.navigate(['/accueil']);
+  }*/
 
 }
