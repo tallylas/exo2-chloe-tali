@@ -1,2 +1,5 @@
 <p class="titreGestion">Gestion</p>
-<p>{{recupInfos | json}}</p>
+
+<div class="infosGestion" *ngFor="let item of recupInfos| keyvalue">
+  <h5>{{ item.key }} : {{ item.value }}</h5>
+</div>

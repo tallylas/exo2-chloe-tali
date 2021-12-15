@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, NgForm, Validators} from "@angular/forms";
 import {ServiceGestionService} from "../service-gestion.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-contact',
@@ -22,7 +23,8 @@ export class PageContactComponent implements OnInit {
 
   constructor(
     private fb : FormBuilder,
-    private sg: ServiceGestionService
+    private sg: ServiceGestionService,
+    private router : Router
   ) { }
 
 
@@ -48,8 +50,8 @@ ngOnInit(): void {}
     const email = form.value['email'];
     const commentaire = form.value['commentaire'];
 
-    this.sg.recupererInfos(firstName, lastName, age.toString(), email, commentaire);
-    //this.router.navigate(['/accueil']);
+    this.sg.recupererInfos(firstName, lastName, age, email, commentaire);
+    this.router.navigate(['/accueil']);
   }
 
 }

@@ -23,7 +23,8 @@ const routes : Routes = [
 },
   {path : 'gestion', component : PageGestionComponent},
   {path : 'contact', component : PageContactComponent},
-  {path : '', component : PageAccueilComponent}
+  {path : '', component : PageAccueilComponent},
+  {path : '**', component : PageAccueilComponent}
 ]
 
 
@@ -32,5 +33,3 @@ const routes : Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
-//{path : '**', component : PageAccueilComponent} A TESTER
