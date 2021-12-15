@@ -7,7 +7,7 @@ export class ServiceGestionService {
 
   constructor() { }
 
-  private getInfos: Object={ Prenom: '', Nom: '', Age: '', Email: '', Commentaire: '' };
+  private getInfos: Object={};
 
   public emitSubject(){
     return this.getInfos;

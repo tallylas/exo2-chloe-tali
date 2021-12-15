@@ -8,7 +8,7 @@ import {ServiceGestionService} from "../service-gestion.service";
 })
 export class PageGestionComponent implements OnInit {
 
-  public recupInfos: Object={ firstName: '', lastName: '', age: '', email: '', commentaire: '' };
+  public recupInfos: Object={};
 
   constructor(private sg : ServiceGestionService){}
 
