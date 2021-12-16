@@ -29,7 +29,7 @@ export class InfosForm {
   private readonly Prenom: string;
   private readonly Nom: string;
   private readonly Age: number;
-  private Email: string = '';
+  private readonly Email: string = '';
   private readonly Commentaire: string;
 
   constructor(firstName: string, lastName: string, age: number, email: string, commentaire: string)
@@ -59,9 +59,5 @@ export class InfosForm {
 
   get commentaire(): string {
     return this.Commentaire;
-  }
-
-  set email(e:string){
-    this.Email = e;
   }
 }
