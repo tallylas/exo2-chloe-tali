@@ -1,5 +1,6 @@
 <p class="titreGestion">Gestion</p>
 
+<div class="body">
 <div class="infosGestion" *ngIf="(recupInfos | json) == '{}'">
   <h5>Erreur 404 !</h5>
   <h5>Avez-vous rempli le formulaire de contact ?</h5>
@@ -8,5 +9,6 @@
 <div *ngIf="(recupInfos | json) != '{}'">
 <div class="infosGestion" *ngFor="let item of recupInfos| keyvalue">
   <h5>{{ item.key }} : {{ item.value }}</h5>
+</div>
 </div>
 </div>
